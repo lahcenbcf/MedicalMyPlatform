@@ -1,68 +1,113 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+*,*::after,*::before{
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+:root{
+  /* --main-color:#6E7F9B */
+  --main-color:#324A72
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+html{
+  font-size: calc(60% + 0.6vmin);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h1{
+  font-size: 3.4rem;
 }
+h2{
+  font-size: 2.8rem;
+}
+h3{
+  font-size: 2.3rem;
+}
+
+h4{
+  font-size: 1.8rem;
+}
+p{
+  font-size: 1.3rem;
+}
+
+input:focus{
+outline:none;
+
+}
+.logo{
+  font-family: 'Righteous', sans-serif;
+}
+
+button{
+  border:none;
+}
+input::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+.login-description{
+color:var(--main-color);
+}
+.b-color{
+  border:1px solid #ddd
+}
+.forget-password{
+  transition:.3s
+}
+.forget-password:hover{
+  color:var(--main-color);
+}
+.continue{
+  background-color:var(--main-color);
+  transition:.3s;
+
+}
+.continue:hover{
+  background-color:white;
+  border:solid 2.5px var(--main-color);
+  color:var(--main-color);
+}
+.inscription,.eye{
+  transition:.3s;
+}
+.inscription:hover,.eye:hover{
+  color:var(--main-color);
+  opacity:1;
+}
+.rotour{
+  color:var(--main-color);
+}
+/* landing page */
+.identification{
+  background-color:var(--main-color);
+  color:white;
+}
+
+.landingTitle{
+  color:var(--main-color);
+}
+
+.landingPicture{
+  max-width:250%;
+  /* margin-left:-200px */
+  position: relative;
+top: 30px;
+
+}
+.content{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(500px,2fr));
+gap: 40px;
+}
+.right-side{
+  background-size:cover;
+}
+.footer{
+  background-color:var(--main-color);
+}
+/* landing page */
