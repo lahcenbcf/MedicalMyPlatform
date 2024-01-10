@@ -15,5 +15,5 @@ export default {
       fluid:"max(32rem,(100% -6rem) / 2)"
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

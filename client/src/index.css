@@ -111,3 +111,276 @@ gap: 40px;
   background-color:var(--main-color);
 }
 /* landing page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo{
+  font-family: 'Righteous', sans-serif;
+}
+
+.button{
+  border:none;
+transition: all ease-in-out 0.5s;
+  scale:1
+}
+button:hover{
+  background-color:white;  
+  transition: all 0.4s;
+  color:#324A72;
+  border-radius:50px;
+  border-color:#324A72;
+  scale:1.1;
+  cursor:pointer;
+}
+button:not:hover{
+  scale:1;
+  transition: all 0.4s;
+}
+
+
+
+input::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+}
+.login{
+  text-align:center;
+  position:absolute;
+  width:600px;
+
+  top: 50%;
+  right:15%;
+  transform: translate(-50%, -50%);
+}
+.login-description{
+color:var(--main-color);
+}
+.b-color{
+  border:1px solid #ddd
+}
+.forget-password{
+  transition:.3s
+}
+.forget-password:hover{
+  color:var(--main-color);
+}
+.continue{
+  background-color:var(--main-color);
+  transition:.3s;
+
+}
+.continue:hover{
+  background-color:white;
+  border:solid 2.5px var(--main-color);
+  color:var(--main-color);
+}
+.inscription,.eye{
+  transition:.3s;
+}
+.inscription:hover,.eye:hover{
+  color:var(--main-color);
+  opacity:1;
+}
+.rotour{
+  color:var(--main-color);
+}
+/* landing page */
+.identification{
+  background-color:var(--main-color);
+  color:white;
+}
+
+.landingTitle{
+  color:var(--main-color);
+}
+
+.landingPicture{
+  max-width:78%;
+   margin-left:150px;
+height:70.5vh
+}
+.content{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(500px,2fr));
+gap: 40px;
+}
+.right-side{
+  background-size:cover;
+}
+.footer{
+  background-color:var(--main-color);
+  float:center;
+  
+}
+
+.block:hover {
+scale:1.3;
+transition: all  0.5s;
+}
+/* landing page */
+
+
+.logo2{
+  float:left;
+}
+.btn:hover { background-color:#324A72;
+  color:white;
+}
+
+.profilePic {
+  top: -3px;
+  left: 666px;
+}
+.profilePic::before {
+  position: absolute;
+  content: "Fatima Al-Husseini";
+  top: 119px;
+  left: -67px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px 66px;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: 700;
+  margin: auto;
+  cursor: pointer;
+}
+
+.persInfo {
+  width: 100%;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 66px;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: 700;
+  margin: auto;
+  cursor: pointer;
+}
+.table {
+  width: 100%;
+
+  border: solid 2px rgba(50, 74, 114, 0.5);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  color: var(--main-color);
+}
+.table::before {
+  position: absolute;
+  content: "";
+  width: 370px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #6e7f9b;
+  border: solid 2px rgba(50, 74, 114, 0.5);
+  opacity: 0.2;
+}
+.table span {
+  font-weight: bold;
+}
+.table span:first-child {
+  width: 25%;
+}
+.table span:last-child {
+  width: 65%;
+}
+.table div:not(:last-child) {
+  border-bottom: 2px solid rgba(50, 74, 114, 0.5);
+}
+.table div span {
+  width: 150px;
+  text-align: center;
+}
+.suivant {
+  color: var(--main-color);
+}
+
+
+
+.table {
+  width: 1300px;
+  margin: auto;
+  border: solid 2px rgba(50, 74, 114, 0.5);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  color: var(--main-color);
+}
+.table::before,
+.table::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #6e7f9b;
+  border: solid 2px rgba(50, 74, 114, 0.5);
+  opacity: 0.2;
+}
+
+.table::after {
+  top: 0;
+  left: 730px;
+}
+.profilePic {
+  top: -69px;
+  left: 638px;
+}
+.profilePic::before {
+  position: absolute;
+  content: "Changer la photo";
+  top: 193px;
+  left: -16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 10px 66px;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: 700;
+  margin: auto;
+  cursor: pointer;
+}
+ 
+.change {
+  display: block;
+  margin: 40px auto;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 15px 75px;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  border: solid 2.5px var(--main-color);
+}
+
+.change:hover {
+  background-color: white;
+  border: solid 2.5px var(--main-color);
+  color: var(--main-color);
+}
+
+
+@layer components{
+  span{
+    @apply font-bold text-mainColor text-lg;
+  }
+}
