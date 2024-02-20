@@ -1,5 +1,5 @@
 
-# moteur de recherche dans les livres
+# what is Doctor
 
 Doctor est une platform dédié aux médecins pour les aider à la gestion des patiens
 un médecin peut suivre ses patients et ses états médicaux et à l'aide d'un modèle AI le médecin peut suivre ses patients et prendre décisions
