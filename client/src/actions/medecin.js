@@ -38,6 +38,8 @@ export const loginMed = (email, password) => async (dispatch, getState) => {
         },
       }
     );
+
+    console.log(user)
     if (user.data?.message) {
       dispatch({
         type: USER_FAIL,
@@ -48,8 +50,6 @@ export const loginMed = (email, password) => async (dispatch, getState) => {
         type: USER_SUCCESS,
         payload: user.data,
       });
-
-      console.log(user.data);
 
       //save our userData to localStorage
       localStorage.setItem('med', JSON.stringify(getState().auth.medInfo));
@@ -182,6 +182,8 @@ export const registerUser = (data) => async (dispatch) => {
     dispatch({
       type: USER_REQUEST,
     });
+
+    console.log(data)
     const response = await baseUrl.post('/auth/register', data, {
       headers: {
         'Content-Type': 'application/json',

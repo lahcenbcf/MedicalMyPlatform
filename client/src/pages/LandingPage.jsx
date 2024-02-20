@@ -1,23 +1,39 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPatients } from '../actions/patients';
 import Spinner from '../components/Spinner';
 import { Link } from "react-router-dom"
+import FilterModalPatient from '../components/FilterModalPatient';
+import AddPatient from '../components/AddPatient';
 
 function DashBoard() {
     const dispatch=useDispatch()
     const {loading,patients,success}=useSelector(store => store.patient)
+
+    const [modalIsShown,setModalIsShown]=useState(false)
+    const [addPatientModal,setAddPatientModal]=useState(false)
+    const showModal=()=>{
+      setModalIsShown(prev => !prev)
+   }
+
     useEffect(()=>{
         dispatch(getPatients())
     },[])
+
   return (
     <div className='container mx-auto w-full'>
     {
         loading && <Spinner />
     }
+    {
+      modalIsShown && <FilterModalPatient setShowModal={setModalIsShown} />
+      
+    }
+    {addPatientModal && <AddPatient />}
+
     <div className='text-4xl flex  ml-11 mt-5 justify-between '>
       <h1>List des patients</h1>
-      <button className='btn mr-24 border-2 text-doctor-blue px-10 border-doctor-blue rounded-3xl text-xl'>Filtrer</button>
+      <button onClick={showModal} className='btn mr-24 border-2 text-doctor-blue px-10 border-doctor-blue rounded-3xl text-xl'>Filtrer</button>
     </div>
     <div className='bg-mainColor w-full text-white mt-9 pb-5 flex justify-evenly items-center rounded-2xl'>
        <h1 className=' mt-4 mx-24 text-2xl'>Nom</h1>
@@ -78,6 +94,11 @@ function DashBoard() {
     </div>
 */}
     
+   <div className='fixed bottom-6 right-6 flex justify-evenly items-center w-full mx-auto'>
+         <Link className='underline'>Précédent</Link>
+         <button onClick={()=>setAddPatientModal(true)} setAddPatientModal={setAddPatientModal} className='px-6 py-2 rounded-md bg-mainColor text-white font-semibold'>Ajouter un patient</button>
+         <Link className='underline'>Suivant</Link>
+   </div>
     </div>
   )
 }

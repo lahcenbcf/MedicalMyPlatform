@@ -27,6 +27,7 @@ const changeHandler=()=>  {
 const dispatch=useDispatch()
 
 const handleRequest=()=>{
+    if(!formData.nm || !formData.genre || !formData.lastname || !formData.firstname || !formData.username || !formData.password || !formData.dateDebutTravail || !formData.lieuDeTravail) return;
     dispatch(updateUserProfile({...formData , imagePath : imagePath ? imagePath :null}))
 }
   const uploadHandler=async(e)=>{
@@ -40,7 +41,6 @@ const handleRequest=()=>{
         "Content-Type":"multipart/form-data"
       }
     })
-    console.log(res.data)
     setImagePath(res.data)
     dispatch(
       uploadPhoto(imagePath)
@@ -49,7 +49,7 @@ const handleRequest=()=>{
 
     try {
     } catch (error) {
-        
+        console.log(error)
     }
   }
   return (

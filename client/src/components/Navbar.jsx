@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 function Navbar() {
     const {medInfo}=useSelector(state => state.auth)
     const navigate=useNavigate()
-    const dispatch=useDispatch()
     /*const logoutSession=()=>{
         dispatch(logoutUser())
         navigate("/login")
@@ -25,10 +24,11 @@ function Navbar() {
     </Link> 
           {
             medInfo?._id ? <ul>
-            <Link to={"/calendrier"} className='headerbutton  w-40 text-doctor-blue rounded'>Calendrier</Link>
-            <Link to={"/historique"} className='headerbutton w-44 text-doctor-blue rounded mx-10' >Historique</Link>
-            <Link to={"/notify"} className='headerbutton text-doctor-blue mx-10' >Notifications</Link>
-            <button onClick={logout} className='headerbutton text-doctor-blue mx-10' >Déconnecter</button>
+            <Link to={"/calendrier"} className='headerbutton  w-40 text-mainColor font-semibold text-lg rounded'>Calendrier</Link>
+            <Link to={"/historique"} className='headerbutton w-44 text-mainColor font-semibold text-lg rounded mx-10' >Historique</Link>
+            <Link to={"/notify"} className='headerbutton text-mainColor font-semibold text-lg mx-10' >Notifications</Link>
+            <Link to={"/myProfile"} className='headerbutton text-mainColor font-semibold text-lg mx-10' >profile</Link>
+            <button onClick={logout} className='headerbutton text-mainColor font-semibold text-lg mx-10' >Déconnecter</button>
             </ul> : 
           
           <Link to={"/login"} className="py-3 px-7 bg-mainColor rounded-3xl font-semibold text-white">

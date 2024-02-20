@@ -10,7 +10,9 @@ import { useSelector,useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import {registerUser} from "../actions/medecin"
-import { useNavigate } from "react-router-dom";
+
+
+
 export default function Register() {
     const [formData,setFormData]=useState({
         password:"",

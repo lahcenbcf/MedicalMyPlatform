@@ -1,6 +1,5 @@
-const dotEb=nv=require('dotenv').config()
+nv=require('dotenv').config()
 const TOKEN_SECRET=process.env.Secret_Jwt
-console.log(TOKEN_SECRET)
 const jwt = require("jsonwebtoken")
 const createToken=(userId)=>{
     return jwt.sign({

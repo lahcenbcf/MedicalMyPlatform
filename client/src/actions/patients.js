@@ -1,4 +1,4 @@
-import {PATIENTS_ERR,GET_PATIENTS,PATIENT_LOADING} from "../constants/patientActions"
+import {PATIENTS_ERR,GET_PATIENTS,PATIENT_LOADING, FILTER_PATIENT} from "../constants/patientActions"
 import {baseUrl} from "./medecin"
 
 
@@ -14,7 +14,6 @@ export const getPatients=()=>async(dispatch,getState)=>{
             payload:res.data.message
         })
     }else{
-        console.log(res.data)
         dispatch({
             type:GET_PATIENTS,
             payload:res.data
@@ -53,6 +52,30 @@ export const addPatient=(data)=>async(dispatch,getState)=>{
         dispatch({
             type:PATIENTS_ERR,
             payload:error.message
+        })
+    }
+}
+
+
+export const filterPatients=(filterInfo)=>async(dispatch,getState)=>{
+    try {
+        dispatch({
+            type:PATIENT_LOADING
+        })
+
+        const patients=getState().patient.patients
+        const filteredPatients=patients.filter(p=>(p.firstname == filterInfo.firstname && p.lastname==filterInfo.lastname && p.status==filterInfo.isMalade ))
+        dispatch({
+            type:FILTER_PATIENT,
+            payload:filteredPatients
+        })
+
+
+        
+    } catch (error) {
+        dispatch({
+            type:PATIENTS_ERR,
+            payload:error?.message
         })
     }
 }

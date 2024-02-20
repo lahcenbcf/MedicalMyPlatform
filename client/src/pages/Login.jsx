@@ -30,7 +30,7 @@ export default function Login() {
     }
 
     useEffect(()=>{
-      if(success)  window.location.href="/dashboard"
+      if(success)  window.location.href="/"
     },[success])
 
   return (

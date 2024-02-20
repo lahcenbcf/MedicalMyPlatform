@@ -378,6 +378,10 @@ transition: all  0.5s;
   color: var(--main-color);
 }
 
+.glassBg{
+  background-color: rgba(65, 66, 70, 0.11);
+}
+
 
 @layer components{
   span{

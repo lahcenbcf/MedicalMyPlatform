@@ -1,8 +1,9 @@
-import {PATIENTS_ERR,GET_PATIENTS,PATIENT_LOADING,ADD_PATIENTS} from "../constants/patientActions"
+import {PATIENTS_ERR,GET_PATIENTS,PATIENT_LOADING,ADD_PATIENTS,FILTER_PATIENT} from "../constants/patientActions"
 
 
 const initialState={
     patients:[],
+    filteredPatients:[],
     success:true,
     err:""
 }
@@ -29,6 +30,14 @@ export const patientReducer=(state=initialState,action)=>{
             return {
                 ...state,loading:false,
                 success:true
+            }
+
+        case FILTER_PATIENT:
+            
+            return {
+                ...state,
+                loading:false,
+                filteredPatients:action.payload
             }
     
         default:
